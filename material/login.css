@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(IMG_3059.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container i:nth-child(1) {
+  border-radius: 43% 57% 74% 26%/ 44% 30% 70% 56%;
+  animation: animate 6s linear infinite;
+}
+.container i:nth-child(2) {
+  border-radius: 23% 77% 31% 69%/ 71% 30% 70% 29%;
+  animation: animate 4s linear infinite;
+}
+.container i:nth-child(3) {
+  border-radius: 44% 56% 16% 84%/ 37% 65% 35% 63%;
+  animation: animate2 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #121212;
+  transition: 0.5s;
+}
+
+.container:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.container .login {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container .login h2 {
+  font-size: 2em;
+  color: rgb(97, 97, 242);
+}
+
+.container .login .inputBx {
+  position: relative;
+  width: 100%;
+}
+
+.container .login .inputBx input {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid rgb(97, 97, 242);
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.container .login .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.container .login .inputBx input[type="submit"] {
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  border: none;
+  cursor: pointer;
+}
+
+.container .login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container .login .links a {
+  color: #fff;
+  text-decoration: none;
+}
